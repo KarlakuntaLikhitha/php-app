@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: php-app
+  name: php-app-deployment
 spec:
   replicas: 1
   selector:
@@ -14,6 +14,7 @@ spec:
     spec:
       containers:
       - name: php-app
-        image: karlakuntalikhitha/php-app:latest
+        image: karlakuntalikhitha/php-app
         ports:
         - containerPort: 80
+
