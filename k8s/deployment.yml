@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: php-app-deployment
+  name: php-app
 spec:
   replicas: 1
   selector:
@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - name: php-app
-        image: karlakuntalikhitha/php-app
+        image: karlakuntalikhitha/php-app:latest  # You can use :latest or :${GITHUB_SHA}
         ports:
         - containerPort: 80
+
 
